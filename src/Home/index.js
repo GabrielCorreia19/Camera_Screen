@@ -45,7 +45,7 @@ export default function Home({ navigation }) {
             color={"#FFF"}
           />
         </BtnVideo>
-        <BtnVideo>
+        <BtnVideo onPress={() => navigation.navigate("Video_Frontal")}>
           <TextBtnVideo>Vídeo Frontal</TextBtnVideo>
           <Entypo
             style={{ marginTop: 30 }}
@@ -54,7 +54,7 @@ export default function Home({ navigation }) {
             color={"#FFF"}
           />
         </BtnVideo>
-        <BtnVideo>
+        <BtnVideo onPress={() => navigation.navigate("Video_Traseiro")}>
           <TextBtnVideo>Vídeo Traseiro</TextBtnVideo>
           <Entypo
             style={{ marginTop: 30 }}
