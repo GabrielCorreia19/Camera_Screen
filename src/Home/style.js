@@ -5,7 +5,6 @@ export const Container = styled.SafeAreaView`
     background-color: #000;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
 `
 export const TextHeader = styled.Text`
     font-size: 16px;
@@ -13,7 +12,6 @@ export const TextHeader = styled.Text`
     color: #FFF;
     font-weight: bold;
     margin-bottom: 20px;
-    margin-top: 40px;
 `
 export const BtnCamera = styled.TouchableOpacity`
     width: 90%;
@@ -22,7 +20,7 @@ export const BtnCamera = styled.TouchableOpacity`
     margin-bottom: 15px;
     background-color: #FD7200;
     border-radius: 12px;  
-    align-items: center;
+    align-items: center; 
 `
 export const TextBtnCamera = styled.Text`
     font-size: 15px;
@@ -38,17 +36,15 @@ export const TextHeaderVideo = styled.Text`
     margin-bottom: 10px;
 `
 export const SectionBtnVideo = styled.View`
-    flex: 1;
     width: 90%;
     height: 50%;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 20px;
 `
 export const BtnVideo = styled.TouchableOpacity`
     width: 40%;
-    height: 40%;
+    height: 42%;
     background-color: #FD7200;
     margin: 14px;
     align-items: center;
@@ -63,7 +59,8 @@ export const TextBtnVideo = styled.Text`
 `
 export const SectionIcon = styled.View`
     width: 90%;
+    position: absolute;
+    bottom: 2%;
     flex-direction: row;
     justify-content: center;
-    background-color: #000;
 `

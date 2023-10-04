@@ -58,7 +58,7 @@ export default function Video_Frontal(){
       </CameraContainer>
       <Video 
       ref={video}
-      style={{alignSelf: 'center', width: 350, height: 220}}
+      style={{alignSelf: 'center', width: 360, height: 220}}
       source = {{
         uri: record,
       }}
@@ -75,16 +75,6 @@ export default function Video_Frontal(){
         }
         />
       </SectionButtons>
-      <Button 
-      title="Trocar câmera"
-      onPress={() => {
-        setType(
-          type === Camera.Constants.Type.back 
-          ? Camera.Constants.Type.front 
-          : Camera.Constants.Type.back
-        );
-      }}
-      />
       <Button title="Iniciar Video" onPress={() => takeVideo()}/> 
       <Button title="Parar Video" onPress={() => stopVideo()}/> 
     </Container>

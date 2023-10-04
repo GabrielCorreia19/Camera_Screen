@@ -21,7 +21,6 @@ export default function Video_Frontal(){
 
       const audioStatus = await Camera.requestMicrophonePermissionsAsync();
       setHasAudioPermission(audioStatus.status === 'granted');
-    
     })();
   }, []);
 

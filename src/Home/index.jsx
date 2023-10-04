@@ -1,4 +1,5 @@
 import { Entypo } from "@expo/vector-icons";
+import { Text } from "react-native";
 
 import {
   Container,
@@ -33,6 +34,16 @@ export default function Home({ navigation }) {
           color={"#FFF"}
         />
         <TextBtnCamera>Câmera Traseira</TextBtnCamera>
+      </BtnCamera>
+      <BtnCamera onPress={() => navigation.navigate("Camera_Frontal_Back")}>
+        <Entypo
+          style={{ marginLeft: 20 }}
+          name="camera"
+          size={30}
+          color={"#FFF"}
+        />
+        <Text 
+        style={{fontSize: 15, color: '#FFF', fontWeight: 'bold', marginLeft: '15%'}}>Câmera Frontal e Traseira</Text>
       </BtnCamera>
       <TextHeaderVideo>Vídeos disponíveis:</TextHeaderVideo>
       <SectionBtnVideo>
@@ -74,10 +85,10 @@ export default function Home({ navigation }) {
         </BtnVideo>
       </SectionBtnVideo>
       <SectionIcon>
-        <Entypo name="home" size={30} color={"#F5F5F5"} style={{ margin: 25 }} />
-        <Entypo name="grid" size={30} color={"#F5F5F5"} style={{ margin: 25 }} />
-        <Entypo name="user" size={30} color={"#F5F5F5"} style={{ margin: 25 }} />
-        <Entypo name="cog"  size={30} color={"#F5F5F5"} style={{ margin: 25 }} />
+        <Entypo name="home" size={30} color={"#F5F5F5"} style={{marginHorizontal: 35}}/>
+        <Entypo name="grid" size={30} color={"#F5F5F5"} style={{marginHorizontal: 35}}  />
+        <Entypo name="user" size={30} color={"#F5F5F5"} style={{marginHorizontal: 35}} />
+        <Entypo name="cog"  size={30} color={"#F5F5F5"} style={{marginHorizontal: 35}} />
       </SectionIcon>
     </Container>
   );

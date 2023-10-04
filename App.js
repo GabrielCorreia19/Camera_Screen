@@ -5,6 +5,7 @@ import Camera_Frontal from './src/Camera_Frontal'
 import Camera_Traseira from './src/Camera_Traseira'
 import Video_Traseiro from "./src/Video_Traseiro";
 import Video_Frontal from "./src/Video_Frontal";
+import Camera_Frontal_Back from './src/Camera_Front_Back'
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Screen name="Camera_Traseira" component={Camera_Traseira}/>
         <Stack.Screen name="Video_Traseiro" component={Video_Traseiro}/>
         <Stack.Screen name="Video_Frontal" component={Video_Frontal}/>
+        <Stack.Screen name="Camera_Frontal_Back" component={Camera_Frontal_Back}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
