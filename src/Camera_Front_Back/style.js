@@ -42,6 +42,6 @@ export const ContentModal = styled.View`
 export const CloseButton = styled.TouchableOpacity`
       position: "absolute";
       top: 50;
-      left: 2;
+      left: 2px;
       margin: 10px;
 `   

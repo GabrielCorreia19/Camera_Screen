@@ -64,6 +64,7 @@ export default function Video_Frontal(){
       }}
       useNativeControls
       resizeMode="contain"
+      isMuted={true}
       isLooping
       onPlaybackStatusUpdate={status => setStatus(() => status)}
       />

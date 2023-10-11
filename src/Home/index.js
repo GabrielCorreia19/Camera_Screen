@@ -42,8 +42,7 @@ export default function Home({ navigation }) {
           size={30}
           color={"#FFF"}
         />
-        <Text 
-        style={{fontSize: 15, color: '#FFF', fontWeight: 'bold', marginLeft: '15%'}}>Câmera Frontal e Traseira</Text>
+        <TextBtnCamera style={{right: '22%'}}>Câmera Frontal e Traseira</TextBtnCamera>
       </BtnCamera>
       <TextHeaderVideo>Vídeos disponíveis:</TextHeaderVideo>
       <SectionBtnVideo>
