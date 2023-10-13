@@ -12,3 +12,20 @@ export const SectionButtons = styled.View`
       justify-content: 'center';
       align-items: 'center'; 
 ` 
+export const SectionBtnVideo = styled.View`
+      align-items: center;
+`
+export const BtnVideo = styled.TouchableOpacity`
+      width: 80%;
+      height: 50px;
+      justify-content: center;
+      border-radius: 20px;
+      background-color: #000;
+      margin-vertical: 4px;
+`
+export const TextBtnVideo = styled.Text`
+      font-size: 16px;
+      color: #FFFFFF;
+      font-weight: bold;
+      text-align: center;
+`

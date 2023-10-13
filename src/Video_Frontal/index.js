@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Camera } from "expo-camera";
 import { Video } from "expo-av";
-import { Button, View } from "react-native";
-import { SectionButtons, CameraContainer, Container } from "./styles";
+import { Button, View,Text } from "react-native";
+import { SectionButtons, CameraContainer, Container,SectionBtnVideo, BtnVideo, TextBtnVideo } from "./styles";
 
 export default function Video_Frontal(){
 
@@ -52,7 +52,7 @@ export default function Video_Frontal(){
       <CameraContainer>
         <Camera 
         ref={ref => setCamera(ref)}
-        style={{flex: 1, aspectRatio: 1}}
+        style={{aspectRatio: 1}}
         type={type}
         ratio = {'4:3'}/>
       </CameraContainer>
@@ -68,16 +68,22 @@ export default function Video_Frontal(){
       isLooping
       onPlaybackStatusUpdate={status => setStatus(() => status)}
       />
-      <SectionButtons>
-        <Button 
+      <SectionBtnVideo> 
+        <BtnVideo 
         title = {status.isPlaying ? 'Parar' : 'Rodar Vídeo'}
         onPress={() => 
         status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
         }
-        />
-      </SectionButtons>
-      <Button title="Iniciar Video" onPress={() => takeVideo()}/> 
-      <Button title="Parar Video" onPress={() => stopVideo()}/> 
+        >
+        <TextBtnVideo>Rodar Vídeo</TextBtnVideo>   
+        </BtnVideo>
+      <BtnVideo onPress={() => takeVideo()}>
+        <TextBtnVideo>Iniciar Vídeo</TextBtnVideo>   
+      </BtnVideo> 
+      <BtnVideo onPress={() => stopVideo()}>
+      <TextBtnVideo>Parar Vídeo</TextBtnVideo>   
+      </BtnVideo>
+      </SectionBtnVideo>
     </Container>
   );
 }
