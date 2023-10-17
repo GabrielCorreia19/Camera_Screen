@@ -13,7 +13,7 @@ import {
 
 } from "./style";
 
-export default function App() {
+export default function Camera_Traseira() {
   const camRef = useRef(null);
   const [type] = useState(Camera.Constants.Type.back);
   const [hasPermission, setHasPermission] = useState(null);

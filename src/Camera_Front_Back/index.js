@@ -52,7 +52,7 @@ export default function App() {
         <ContentButtons>
           <ContentCamera>
           <ButtonCamera onPress={takePicture}>
-            <FontAwesome name="camera" size={64} color="#FFFFFF"></FontAwesome>
+            <FontAwesome name="camera" size={36} color="#FFFFFF"></FontAwesome>
           </ButtonCamera>
           </ContentCamera>
         </ContentButtons>
@@ -66,7 +66,7 @@ export default function App() {
             )
           }}
           >
-            <FontAwesome name='exchange' size={64} color='black'></FontAwesome>
+            <FontAwesome name='exchange' size={36} color='black'></FontAwesome>
       </BtnTrocarCamera>
       {capturedPhoto && (
         <Modal animationType="slide" transparent={true} visible={open}>

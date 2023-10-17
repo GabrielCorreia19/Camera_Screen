@@ -1,19 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, Modal, Image, Text } from "react-native";
+import { View, Modal, Image, Text, TouchableOpacity } from "react-native";
 import { Camera } from "expo-camera";
 import { FontAwesome } from "@expo/vector-icons";
 
-import { 
+import {
   ContainerCamera,
   ContentButtons,
   ContentCamera,
   ButtonCamera,
   ContentModal,
   CloseButton,
-
 } from "./style";
 
-export default function App() {
+export default function Camera_Frontal() {
   const camRef = useRef(null);
   const [type] = useState(Camera.Constants.Type.front);
   const [hasPermission, setHasPermission] = useState(null);
@@ -44,19 +43,24 @@ export default function App() {
   }
   return (
     <ContainerCamera>
-      <Camera 
-      style={{width: '100%', height: '100%' }} 
-      type={type} 
-      ref={camRef}>
+      <Camera
+        style={{ width: "100%", height: "100%" }}
+        type={type}
+        ref={camRef}
+      >
         <ContentButtons>
           <ContentCamera>
-          <ButtonCamera onPress={takePicture}>
-            <FontAwesome name="camera" size={45} color="#FFFFFF"></FontAwesome>
-          </ButtonCamera>
+            <ButtonCamera onPress={takePicture}>
+              <FontAwesome
+                name="camera"
+                size={45}
+                color="#FFFFFF"
+              ></FontAwesome>
+            </ButtonCamera>
           </ContentCamera>
         </ContentButtons>
       </Camera>
-      
+
       {capturedPhoto && (
         <Modal animationType="slide" transparent={true} visible={open}>
           <CloseButton
@@ -73,7 +77,7 @@ export default function App() {
           </CloseButton>
           <ContentModal>
             <Image
-              style={{width: "100%", height: "90%", marginTop: 20}}
+              style={{ width: "100%", height: "90%", marginTop: 20 }}
               source={{ uri: capturedPhoto }}
             ></Image>
           </ContentModal>
