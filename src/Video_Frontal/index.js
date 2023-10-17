@@ -75,14 +75,16 @@ export default function Video_Frontal() {
       />
       <SectionBtnVideo>
         <BtnVideo
-          title={status.isPlaying ? "Parar" : "Rodar Vídeo"}
           onPress={() =>
             status.isPlaying
               ? video.current.pauseAsync()
               : video.current.playAsync()
           }
         >
-          <Entypo name="controller-paus" size={30} color={"#FFFFFF"} />
+          <Entypo 
+           name={ status.isPlaying ? "controller-paus" : "controller-play"}
+           color={'#FFF'}
+           size={36} />
         </BtnVideo>
         <BtnVideo onPress={() => takeVideo()}>
           <Entypo name="controller-play" size={36} color={"#FFFFFF"} />
