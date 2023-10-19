@@ -45,9 +45,10 @@ export const SectionBtnVideo = styled.View`
 export const BtnVideo = styled.TouchableOpacity`
     width: 40%;
     height: 42%;
+    margin-vertical: 12px;
+    margin-horizontal: 12px;
     background-color: #FD7200;
-    margin: 14px;
-    align-items: center;
+    align-items: center;    
     border-radius: 12px;
 `
 export const TextBtnVideo = styled.Text`
